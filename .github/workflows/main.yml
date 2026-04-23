@@ -28,3 +28,9 @@ jobs:
           curl -H "Content-Type: application/json" \
           -d "{\"content\": \"🚀 Novo evento no repositório!\"}" \
           ${{ secrets.DISCORD_WEBHOOK }}
+
+- name: Instalar pytest
+  run: pip install pytest
+
+- name: Rodar testes
+  run: pytest
